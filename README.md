@@ -1,5 +1,7 @@
-Run 
+Ganti .env
+sesuain
 
+Run 
 ```
 composer install
 ```
