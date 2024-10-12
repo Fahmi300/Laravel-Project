@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('saved', function (Blueprint $table) {
+        Schema::create('saveds', function (Blueprint $table) {
             $table->id();
             $table->foreignId('news_id')->constrained(
-                table: 'news', indexName: 'news_saved_id'
+                table: 'news', indexName: 'news_saveds_id'
             )->OnDelete('cascade');
             $table->foreignId('users_id')->constrained(
-                table: 'users', indexName: 'users_saved_id'
+                table: 'users', indexName: 'users_saveds_id'
             )->OnDelete('cascade');
             $table->timestamp('date')->useCurrent();
         });

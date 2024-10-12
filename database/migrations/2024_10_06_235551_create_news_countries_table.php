@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('news_country', function (Blueprint $table) {
+        Schema::create('news_countries', function (Blueprint $table) {
             $table->foreignId('news_id')->constrained(
                 table: 'news', indexName: 'news_category_country_id'
             )->OnDelete('cascade');
-            $table->foreignId('category_country_id')->constrained(
-                table: 'category_country', indexName: 'category_country_news_id'
+            $table->foreignId('category_countries_id')->constrained(
+                table: 'category_countries', indexName: 'category_countries_news_id'
             )->OnDelete('cascade');
-            $table->primary(['news_id', 'category_country_id']);
+            $table->primary(['news_id', 'category_countries_id']);
         });
     }
 

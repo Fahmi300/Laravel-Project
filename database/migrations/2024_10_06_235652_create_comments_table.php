@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comment', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('news_id')->constrained(
-                table: 'news', indexName: 'news_comment_id'
+                table: 'news', indexName: 'news_comments_id'
             )->OnDelete('cascade');
             $table->foreignId('users_id')->constrained(
-                table: 'users', indexName: 'users_comment_id'
+                table: 'users', indexName: 'users_comments_id'
             )->OnDelete('set null');
             $table->text('content');
             $table->timestamp('date')->useCurrent();

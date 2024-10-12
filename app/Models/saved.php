@@ -8,4 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class saved extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+
+    protected $fillable = [
+        'date',
+        'news_id',
+        'users_id', 
+    ];
+
+    public function users(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function news(): BelongsTo
+    {
+        return $this->belongsTo(News::class);
+    }
 }
