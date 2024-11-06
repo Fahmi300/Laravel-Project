@@ -19,8 +19,8 @@ class news_countryFactory extends Factory
     public function definition(): array
     {
         return [
-            'news_id' => News::inRandomOrder()->first()->id,
-            'category_countries_id' => Category_country::inRandomOrder()->first()->id,
+            // 'news_id' => News::inRandomOrder()->first()->id,
+            // 'category_countries_id' => Category_country::inRandomOrder()->first()->id,
         ];
     }
 }

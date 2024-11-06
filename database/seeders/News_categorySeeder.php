@@ -14,14 +14,14 @@ class News_categorySeeder extends Seeder
      */
     public function run(): void
     {
-        $newsCategories = News_category::factory()->count(20)->make();
+    //     $newsCategories = News_category::factory()->count(20)->make();
 
-        foreach ($newsCategories as $newsCategory) {
-        // Use firstOrCreate to avoid duplicates
-        News_category::firstOrCreate([
-            'news_id' => $newsCategory->news_id,
-            'category_news_id' => $newsCategory->category_news_id,
-        ]);
-    }
+    //     foreach ($newsCategories as $newsCategory) {
+    //     // Use firstOrCreate to avoid duplicates
+    //     News_category::firstOrCreate([
+    //         'news_id' => $newsCategory->news_id,
+    //         'category_news_id' => $newsCategory->category_news_id,
+    //     ]);
+    // }
     }
 }

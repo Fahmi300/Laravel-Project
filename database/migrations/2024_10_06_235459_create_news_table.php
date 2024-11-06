@@ -19,7 +19,7 @@ return new class extends Migration
             )->OnDelete('set null');
             $table->text('content');
             $table->string('image', 255)->nullable();
-            $table->timestamp('date');
+            $table->timestamps();
         });
     }
 

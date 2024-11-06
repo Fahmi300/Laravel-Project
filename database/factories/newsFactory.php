@@ -21,9 +21,8 @@ class newsFactory extends Factory
         return [
             'news_title' => fake()->sentence(),
             'users_id' => User::inRandomOrder()->first()->id,
-            'content' => fake()->paragraphs(9, true),
+            'content' => fake()->paragraphs(15, true),
             'image' => fake()->imageUrl(),
-            'date' => now(),
             'slug' =>Str::slug(fake()->sentence()),
         ];
     }

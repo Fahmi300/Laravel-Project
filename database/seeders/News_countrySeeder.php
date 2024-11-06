@@ -13,14 +13,14 @@ class News_countrySeeder extends Seeder
      */
     public function run(): void
     {
-        $newsCountries = News_country::factory()->count(60)->make();
+        // $newsCountries = News_country::factory()->count(60)->make();
 
-        foreach ($newsCountries as $newsCountry) {
-        // Use firstOrCreate to avoid duplicates
-            News_country::firstOrCreate([
-                'news_id' => $newsCountry->news_id,
-                'category_countries_id' => $newsCountry->category_countries_id,
-            ]);
-        }
+        // foreach ($newsCountries as $newsCountry) {
+        // // Use firstOrCreate to avoid duplicates
+        //     News_country::firstOrCreate([
+        //         'news_id' => $newsCountry->news_id,
+        //         'category_countries_id' => $newsCountry->category_countries_id,
+        //     ]);
+        // }
     }   
 }

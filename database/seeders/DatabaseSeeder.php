@@ -6,8 +6,8 @@ use App\Models\User;
 use App\Models\Category_country;
 use App\Models\Category_news;
 use App\Models\News;
-use App\Models\News_category;
-use App\Models\News_country;
+// use App\Models\News_category;
+// use App\Models\News_country;
 use App\Models\Comment;
 use App\Models\Like;
 use App\Models\Saved;
@@ -28,8 +28,8 @@ class DatabaseSeeder extends Seeder
                     Category_countrySeeder::class,
                     Category_newsSeeder::class,
                     NewsSeeder::class,
-                    News_categorySeeder::class,
-                    News_countrySeeder::class,
+                    // News_categorySeeder::class,
+                    // News_countrySeeder::class,
                     CommentSeeder::class,
                     SavedSeeder::class,
                     LikeSeeder::class]);

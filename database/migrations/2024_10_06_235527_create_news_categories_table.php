@@ -19,6 +19,7 @@ return new class extends Migration
                 table: 'category_news', indexName: 'category_news_news_id'
             )->OnDelete('cascade');
             $table->primary(['news_id', 'category_news_id']);
+            $table->timestamps();
         });
     }
 

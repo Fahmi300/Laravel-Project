@@ -15,12 +15,14 @@ class news_categoryFactory extends Factory
      * Define the model's default state.
      *
      * @return array<string, mixed>
+     * 
+     * 
      */
     public function definition(): array
     {
         return [
-            'news_id' => News::inRandomOrder()->first()->id,
-            'category_news_id' => Category_news::inRandomOrder()->first()->id,
+            // 'news_id' => News::inRandomOrder()->first()->id,
+            // 'category_news_id' => Category_news::inRandomOrder()->first()->id,
         ];
     }
 }

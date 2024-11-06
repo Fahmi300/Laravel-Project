@@ -9,8 +9,6 @@ class news_category extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
-
     protected $fillable = [
         'news_id', 
         'category_news_id'
